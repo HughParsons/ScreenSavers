@@ -108,7 +108,7 @@ class Star {
         let (prev_x, prev_y) = scaleToScreensize(x: _prev_x, y: _prev_y);
         
         let context = NSGraphicsContext.current?.cgContext;
-        context?.setLineWidth(0.5);
+        context?.setLineWidth(0.5 + 2 * self.r);
         context?.setStrokeColor(NSColor.white.cgColor);
         context?.move(to: CGPoint(x: prev_x, y: prev_y));
         context?.addLine(to: CGPoint(x: x, y: y));
